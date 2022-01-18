@@ -21,7 +21,8 @@ function Product() {
   return product.map((currentProduct) => {
     return (
       <article key={currentProduct.id}>
-        <div className="card container pt-5" style={{ width: "18rem" }}>
+        <div className="card-group" style={{ width: "18rem" }}>
+          <div className="card">
           <img
             className="card-img-top"
             src={currentProduct.image}
@@ -30,11 +31,16 @@ function Product() {
           <div className="card-body">
             <h5 className="card-title"> {currentProduct.title} </h5>
             <p className="card-text"> {currentProduct.description} </p>
-            <p>Price: $ {Number(currentProduct.price)} </p>
+            <p>Price: {currentProduct.price.toLocaleString("pt-PT", {
+          currency: "EUR",
+          style: "currency",
+        })} </p>
             <Link to="" className="btn btn-primary">
               {" "}
               Adicionar à lista de desejo
             </Link>
+          </div>
+        
           </div>
         </div>
       </article>
