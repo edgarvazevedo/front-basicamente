@@ -25,10 +25,11 @@ function Navbar() {
                 className="form-select"
                 aria-label="Default select example"
               >
-                <option selected>Open this select menu</option>
-                <option value="1">One</option>
-                <option value="2">Two</option>
-                <option value="3">Three</option>
+                <option selected>Filter product</option>
+                <option value="1">Men's clothing</option>
+                <option value="2">Jewelery</option>
+                <option value="3">Electronics</option>
+                <option value="3">Women's clothing</option>
               </select>
             </ul>
             <input
